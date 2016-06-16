@@ -1,0 +1,26 @@
+#spells-container .row {
+    margin-bottom: 10px;
+}
+
+#headers {
+    border-bottom:1px solid #dddddd;
+}
+
+.spell-details {
+    display: none;
+    margin-top: 10px;
+}
+
+@media(max-width:767px) {
+    /*.spell-level {*/
+        /*display: none;*/
+    /*}*/
+
+    .spell-classes {
+        display: none;
+    }
+
+    .spell-school {
+        display: none;
+    }
+}
