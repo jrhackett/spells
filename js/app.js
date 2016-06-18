@@ -10,7 +10,7 @@ myApp.config(function($routeProvider, $locationProvider) {
             controller: "SpellListController"
         })
         .when("/my-spellbook", {
-            templateUrl: "spells/partials/spellbook-partial.html",
+            templateUrl: "spells/partials/spells-partial.html",
             controller: "SpellBookController"
         })
         .otherwise({
@@ -35,7 +35,7 @@ myApp.controller("SpellListController", function($scope, $http) {
     });
 
     $scope.handleButtonClick = function(name) {
-        jQuery("#" + name + " div:nth-of-type(6)").slideToggle();
+        jQuery("#" + name + " .spell-details").slideToggle();
         var button = $jq("#" + name + " div:nth-of-type(1) button");
         button.text() === "Show" ? button.text("Hide") : button.text("Show");
     }
