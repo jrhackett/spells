@@ -6,12 +6,14 @@ var myApp = angular.module("myApp", ["ngRoute"]);
 myApp.config(function($routeProvider, $locationProvider) {
     $routeProvider
         .when("/spells", {
-            templateUrl: "partials/spells-partial.html",
+            templateUrl: "spells/partials/spells-partial.html",
             controller: "SpellListController"
         })
         .otherwise({
             redirectTo: "/spells"
         });
+
+    $locationProvider.html5Mode(true);
 });
 
 myApp.controller("NavBarController", function($scope) {
@@ -22,7 +24,7 @@ myApp.controller("NavBarController", function($scope) {
 });
 
 myApp.controller("SpellListController", function($scope, $http) {
-    $http.get('resources/spells.json').then(function(response) {
+    $http.get('spells/resources/spells.json').then(function(response) {
         $scope.spells = response.data;
     });
 
