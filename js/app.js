@@ -16,6 +16,7 @@ myApp.config(function($routeProvider, $locationProvider) {
     $locationProvider.html5Mode(true);
 });
 
+//navbar controller
 myApp.controller("NavBarController", function($scope) {
     $scope.brand = "Spells";
     $scope.first = "Level";
@@ -23,6 +24,7 @@ myApp.controller("NavBarController", function($scope) {
     $scope.third = "Class";
 });
 
+//spell list controller
 myApp.controller("SpellListController", function($scope, $http) {
     $http.get('spells/resources/spells.json').then(function(response) {
         $scope.spells = response.data;
