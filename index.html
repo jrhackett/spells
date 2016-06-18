@@ -21,14 +21,20 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="#">{{brand}}</a>
+                    <!--<a class="navbar-brand" href="#">{{brand}}</a>-->
                 </div>
                 <div class="collapse navbar-collapse" id="navbar-collapse-1">
-                    <form class="navbar-form navbar-right" role="search">
-                        <div class="form-group">
-                            <input type="text" class="form-control" placeholder="Search" id = "spell-search" > <!-- TODO maybe find a better way to do this event with angular? -->
-                        </div>
-                    </form>
+                    <ul class="nav navbar-nav">
+                        <li><a href = "/spells">Home</a></li>
+                        <li><a href = "/my-spellbook">My Spellbook</a></li>
+                        <li>
+                            <form class="navbar-form navbar-right" role="search">
+                                <div class="form-group">
+                                    <input type="text" class="form-control" placeholder="Search" id = "spell-search" > <!-- TODO maybe find a better way to do this event with angular? -->
+                                </div>
+                            </form>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </nav>

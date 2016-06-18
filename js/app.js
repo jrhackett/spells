@@ -9,6 +9,10 @@ myApp.config(function($routeProvider, $locationProvider) {
             templateUrl: "spells/partials/spells-partial.html",
             controller: "SpellListController"
         })
+        .when("/my-spellbook", {
+            templateUrl: "spells/partials/spellbook-partial.html",
+            controller: "SpellBookController"
+        })
         .otherwise({
             redirectTo: "/spells"
         });
@@ -35,4 +39,8 @@ myApp.controller("SpellListController", function($scope, $http) {
         var button = $jq("#" + name + " div:nth-of-type(1) button");
         button.text() === "Show" ? button.text("Hide") : button.text("Show");
     }
+});
+
+myApp.controller("SpellBookController", function($scope) {
+
 });
