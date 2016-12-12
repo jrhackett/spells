@@ -22,7 +22,7 @@ myApp.config(function($routeProvider, $locationProvider) {
 
 //navbar controller
 myApp.controller("NavBarController", function($scope) {
-    $scope.brand = "Spells";
+    $scope.brand = "Home";
     $scope.first = "Level";
     $scope.second = "School";
     $scope.third = "Class";
@@ -36,7 +36,7 @@ myApp.controller("SpellListController", function($scope, $http) {
 
     $scope.handleButtonClick = function(name) {
         jQuery("#" + name + " .spell-details").slideToggle();
-        var button = $jq("#" + name + " div:nth-of-type(1) button");
+        var button = jQuery("#" + name + " div:nth-of-type(1) button");
         button.text() === "Show" ? button.text("Hide") : button.text("Show");
     }
 });
