@@ -11,6 +11,41 @@
     margin-top: 10px;
 }
 
+.selects select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border: 0;
+    padding: 15px 10px;
+    font-size: 14px;
+    display: inline-block;
+    background-color: #f8f8f8;
+}
+
+li.selects:first-of-type {
+    border-left: 1px solid #e7e7e7;
+}
+
+li.selects {
+    border-right: 1px solid #e7e7e7;
+    border-radius: 0;
+}
+
+.selects {
+    position: relative;
+}
+
+.selects:after {
+    content: "";
+    display: inline-block;
+    width: 0;
+    height: 0;
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-top: 6px solid #333;
+    margin-right: 10px;
+}
+
 @media(max-width:767px) {
     /*.spell-level {*/
         /*display: none;*/

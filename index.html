@@ -24,11 +24,50 @@
                     <!--<a class="navbar-brand" href="#">{{brand}}</a>-->
                 </div>
                 <div class="collapse navbar-collapse" id="navbar-collapse-1">
-                    <ul class="nav navbar-nav">
-                        <li><a href = "/spells">Home</a></li>
-                        <li><a href = "/my-spellbook">My Spellbook</a></li>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li class = "selects">
+                            <select name = "level-select">
+                                <option value = "any-level">Any Level</option>
+                                <option value = "level-0">Level 0</option>
+                                <option value = "level-1">Level 1</option>
+                                <option value = "level-2">Level 2</option>
+                                <option value = "level-3">Level 3</option>
+                                <option value = "level-4">Level 4</option>
+                                <option value = "level-5">Level 5</option>
+                                <option value = "level-6">Level 6</option>
+                                <option value = "level-7">Level 7</option>
+                                <option value = "level-8">Level 8</option>
+                                <option value = "level-9">Level 9</option>
+                            </select>
+                        </li>
+                        <li class = "selects">
+                            <select name = "class-select">
+                                <option value = "any-class">Any Class</option>
+                                <option value = "bard">Bard</option>
+                                <option value = "cleric">Cleric</option>
+                                <option value = "druid">Druid</option>
+                                <option value = "paladin">Paladin</option>
+                                <option value = "ranger">Ranger</option>
+                                <option value = "sorcerer">Sorcerer</option>
+                                <option value = "warlock">Warlock</option>
+                                <option value = "wizard">Wizard</option>
+                            </select>
+                        </li>
+                        <li class = "selects">
+                            <select name = "school-select">
+                                <option value = "any-school">Any School</option>
+                                <option value = "abjuration">Abjuration</option>
+                                <option value = "conjuration">Conjuration</option>
+                                <option value = "divination">Divination</option>
+                                <option value = "enchantment">Enchantment</option>
+                                <option value = "evocation">Evocation</option>
+                                <option value = "illusion">Illusion</option>
+                                <option value = "necromancy">Necromancy</option>
+                                <option value = "transmutation">Transmutation</option>
+                            </select>
+                        </li>
                         <li>
-                            <form class="navbar-form navbar-right" role="search">
+                            <form class="navbar-form" role="search">
                                 <div class="form-group">
                                     <input type="text" class="form-control" placeholder="Search" id = "spell-search" > <!-- TODO maybe find a better way to do this event with angular? -->
                                 </div>
